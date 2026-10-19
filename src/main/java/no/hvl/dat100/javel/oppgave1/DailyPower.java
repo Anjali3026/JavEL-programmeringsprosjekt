@@ -21,17 +21,20 @@ public class DailyPower {
             System.out.print(usage[i] + "kWh");
 
         }
-
+         System.out.println("{\n");
 
     }
+
 
     // c) compute power usage for a single day
     public static double computePowerUsage(double[] usage) {
 
         double sum = 0;
+        for (int i = 0; i < usage.length; i++) {
+            sum += usage[i];
 
-        // TODO
 
+        }
         return sum;
     }
 
@@ -40,7 +43,7 @@ public class DailyPower {
 
         double price = 0;
 
-        // TODO
+
 
         return price;
     }

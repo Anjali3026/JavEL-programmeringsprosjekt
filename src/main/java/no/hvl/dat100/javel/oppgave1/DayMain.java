@@ -16,9 +16,24 @@ public class DayMain {
         System.out.println("==============");
         System.out.println();
 
-        /*
-        TODO
+        //Oppgave a
+        System.out.println("Strømpris per time i løpet av en dag:");
+        DailyPower.printPowerPrices(powerprices_day);
 
+
+
+        //Oppgave b
+        System.out.println("Strømforbruk per time i løpet av en dag:");
+        DailyPower.printPowerUsage(powerusage_day);
+
+
+        //Oppgave c
+        System.out.println("Totale størmforbruken per dag:");
+        System.out.println(DailyPower.computePowerUsage(powerusage_day));
+
+
+
+/*
          Write code that tests the methods you implement in the DailyPower class
          Remember to teste the methods as you implement them
          Remember to also to check that you get the expected results
