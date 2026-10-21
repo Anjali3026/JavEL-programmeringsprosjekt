@@ -9,7 +9,8 @@ public class Customers {
     // a) Complete constructor
     public Customers(int size) {
 
-        // TODO
+        customers = new Customer[size];
+
 
     }
 
@@ -19,7 +20,13 @@ public class Customers {
 
         int count = 0;
 
-        // TODO
+        for(int i = 0; i < customers.length; i++){
+            if(customers[i] != null){
+                count++;
+
+            }
+
+        }
 
         return count;
     }
@@ -29,8 +36,15 @@ public class Customers {
 
         boolean funnet = false;
         Customer c = null;
+        for(int i = 0; i < customers.length; i++){
+            if(customers[i] != null && customers[i].getCustomer_id() == customer_id){
+                c = customers[i];
 
-        // TODO
+                break;
+
+            }
+
+            }
 
         return c;
     }
