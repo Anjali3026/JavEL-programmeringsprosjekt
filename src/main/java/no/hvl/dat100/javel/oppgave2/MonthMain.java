@@ -18,12 +18,18 @@ public class MonthMain {
         System.out.println();
 
         /*
-        TODO
+
 
          Write code that tests the methods you implement in the MonthlyPower class
          Remember to teste the methods as you implement them
          Remember to also to check that you get the expected results
          */
+        System.out.println("Strømforbruk for måneden:");
+        System.out.println(MonthlyPower.computePowerUsage(power_usage_month));
+        System.out.println("Spotpris for måneden:");
+        System.out.println(MonthlyPower.computeSpotPrice(power_usage_month, power_prices_month));
+        System.out.println("Norgespris for måneden:");
+        System.out.println(MonthlyPower.computeNorgesPrice(power_usage_month));
 
     }
 }
