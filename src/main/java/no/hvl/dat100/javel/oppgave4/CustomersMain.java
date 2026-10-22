@@ -34,15 +34,11 @@ public class CustomersMain {
 
 
         //c)
+        System.out.println("");
         System.out.println("Kunde:" + custom.getCustomer(1003));
 
 
-        /*
 
-
-         Write code that uses and tests the methods implemented in the Customers class
-
-        */
 // d) Tester addCustomer
         System.out.println("Legger til Alice: " + custom.addCustomer(alice));
 
