@@ -27,6 +27,19 @@ public class Invoice {
     public void printInvoice() {
         System.out.println("Faktura for: " + month);
         System.out.println("Kunde: " + c);
-        System.out.println("Beløp: " + amount + " kr");
+        System.out.println("Strømforbruk:");
+
+        for (int day = 0; day < usage.length; day++) {
+            System.out.print("Day " + (day + 1) + ":");
+
+            for (int hour = 0; hour < usage[day].length; hour++) {
+                System.out.printf(" %.2f kWh", usage[day][hour]);
+            }
+
+            System.out.println();
+        }
+
+        System.out.printf("Beløp: %.2f kr%n", amount);
     }
 }
+
