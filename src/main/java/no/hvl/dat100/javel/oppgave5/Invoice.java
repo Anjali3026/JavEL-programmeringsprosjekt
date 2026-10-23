@@ -1,4 +1,3 @@
-
 package no.hvl.dat100.javel.oppgave5;
 
 import no.hvl.dat100.javel.oppgave2.MonthlyPower;
@@ -12,7 +11,8 @@ public class Invoice {
     private double[][] prices;
     private double amount;
 
-    public Invoice(Customer c, String month, double[][] usage, double[][] power_prices) {
+    public Invoice(Customer c, String month, double[][] usage,
+                   double[][] power_prices) {
         this.c = c;
         this.month = month;
         this.usage = usage;
@@ -25,21 +25,13 @@ public class Invoice {
     }
 
     public void printInvoice() {
-        System.out.println("Faktura for: " + month);
-        System.out.println("Kunde: " + c);
-        System.out.println("Strømforbruk:");
-
-        for (int day = 0; day < usage.length; day++) {
-            System.out.print("Day " + (day + 1) + ":");
-
-            for (int hour = 0; hour < usage[day].length; hour++) {
-                System.out.printf(" %.2f kWh", usage[day][hour]);
-            }
-
-            System.out.println();
-        }
-
-        System.out.printf("Beløp: %.2f kr%n", amount);
+        System.out.println("========================");
+        System.out.println(c);
+        System.out.println();
+        System.out.println("Month: " + month);
+        System.out.printf("Usage: %10.2f kWh%n",
+                MonthlyPower.computePowerUsage(usage));
+        System.out.printf("Amount: %10.2f NOK%n", amount);
+        System.out.println("========================");
     }
 }
-
