@@ -18,9 +18,9 @@ public class CustomersMain {
 
         Customer alice = new Customer("Alice Smith", "alice@example.com", 1001, PowerAgreementType.SPOT );
         Customer bob = new Customer("Bob Johnson", "bob@example.com", 1002, PowerAgreementType.NORGEPRICE);
-        Customer charlie = new Customer("Charlie Rose", "charlie@example.com", 1003, PowerAgreementType.NORGEPRICE);
+        Customer charlie = new Customer("Charlie Rose", "charlie@example.com", 1003, PowerAgreementType.SPOT);
         Customer diana = new Customer("Diana Prince", "diana@example.com",1004, PowerAgreementType.NORGEPRICE );
-        Customer ethan = new Customer("Ethan Hunt", "ethan@example.com", 1005, PowerAgreementType.SPOT);
+        Customer ethan = new Customer("Ethan Hunt", "ethan@example.com", 1005, PowerAgreementType.SPOT );
 
         //a)
         custom.addCustomer(alice);
@@ -34,15 +34,25 @@ public class CustomersMain {
 
 
         //c)
+        System.out.println("");
         System.out.println("Kunde:" + custom.getCustomer(1003));
 
 
-        /*
+
+// d) Tester addCustomer
+        System.out.println("Legger til Alice: " + custom.addCustomer(alice));
 
 
-         Write code that uses and tests the methods implemented in the Customers class
 
-        */
+        // e) Tester removeCustomer
+        System.out.println("Fjerner Bob: " + custom.removeCustomer(1002));
 
+
+        // f) Tester getCustomers
+        Customer[] kunder = custom.getCustomers();
+
+        for (Customer kunde : kunder) {
+            System.out.println(kunde);
+        }
     }
 }

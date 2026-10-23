@@ -54,29 +54,51 @@ public class Customers {
 
         boolean inserted = false;
 
-        // TODO
-
+        for (int i = 0; i < customers.length; i++) {
+            if (customers[i] == null) {
+                customers[i] = c;
+                inserted = true;
+                break;
+            }
+        }
         return inserted;
     }
 
     // e) remove customer with given id from reference table
-    public Customer removeCustomer(int customer_id) {
+     public Customer removeCustomer(int customer_id) {
 
         boolean deleted = false;
         Customer c = null;
 
-        // TODO
+            for (int i = 0; i < customers.length; i++) {
+                if (customers[i] != null &&
+                        customers[i].getCustomer_id() == customer_id) {
 
-        return c;
-    }
+                    c = customers[i];
+                    customers[i] = null;
+                    deleted = true;
+                    break;
+                }
+            }
+            return c;
+     }
+
 
     // f) return reference table with all customers
     public Customer[] getCustomers() {
 
-        Customer[] customers = null;
+        Customer[] customers = new Customer[countNonNull()];
 
-        // TODO
 
-        return customers;
-    }
-}
+                    int j = 0;
+
+                    for (int i = 0; i < this.customers.length; i++) {
+                        if (this.customers[i] != null) {
+                            customers[j] = this.customers[i];
+                            j++;
+                        }
+                    }
+
+                    return customers;
+                }
+                }
