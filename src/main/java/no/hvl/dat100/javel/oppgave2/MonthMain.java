@@ -25,7 +25,15 @@ public class MonthMain {
          Remember to also to check that you get the expected results
          */
         System.out.println("Strømforbruk for måneden:");
-        System.out.println(MonthlyPower.computePowerUsage(power_usage_month));
+        for (int day = 0; day < power_usage_month.length; day++) {
+            System.out.print("Day " + (day + 1) + ":");
+
+            for (int hour = 0; hour < power_usage_month[day].length; hour++) {
+                System.out.printf(" %.2f kWh", power_usage_month[day][hour]);
+            }
+
+            System.out.println();
+        }
         System.out.println("Spotpris for måneden:");
         System.out.println(MonthlyPower.computeSpotPrice(power_usage_month, power_prices_month));
         System.out.println("Norgespris for måneden:");
