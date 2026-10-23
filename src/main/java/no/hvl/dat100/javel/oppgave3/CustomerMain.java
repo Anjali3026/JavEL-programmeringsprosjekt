@@ -20,7 +20,7 @@ public class CustomerMain {
                 "Alice Smith",
                 "alice@example.com",
                 1001,
-                PowerAgreementType.SPOTPRICE);
+                PowerAgreementType.SPOT);
 
         // Tester toString
         System.out.println(kunde);
@@ -35,7 +35,7 @@ public class CustomerMain {
         kunde.setName("Emma Smith");
         kunde.setEmail("emma@example.com");
         kunde.setCustomer_id(1002);
-        kunde.setAgreement(PowerAgreementType.NORGESPRICE);
+        kunde.setAgreement(PowerAgreementType.NORGEPRICE);
 
         // Tester at verdiene ble endret
         System.out.println(kunde);

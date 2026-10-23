@@ -16,11 +16,11 @@ public class CustomersMain {
 
         Customers custom = new Customers (5);
 
-        Customer alice = new Customer("Alice Smith", "alice@example.com", 1001, PowerAgreementType.SPOTPRICE );
-        Customer bob = new Customer("Bob Johnson", "bob@example.com", 1002, PowerAgreementType.NORGESPRICE);
-        Customer charlie = new Customer("Charlie Rose", "charlie@example.com", 1003, PowerAgreementType.POWERSUPPORT);
-        Customer diana = new Customer("Diana Prince", "diana@example.com",1004, PowerAgreementType.NORGESPRICE );
-        Customer ethan = new Customer("Ethan Hunt", "ethan@example.com", 1005, PowerAgreementType.POWERSUPPORT );
+        Customer alice = new Customer("Alice Smith", "alice@example.com", 1001, PowerAgreementType.SPOT );
+        Customer bob = new Customer("Bob Johnson", "bob@example.com", 1002, PowerAgreementType.NORGEPRICE);
+        Customer charlie = new Customer("Charlie Rose", "charlie@example.com", 1003, PowerAgreementType.NORGEPRICE);
+        Customer diana = new Customer("Diana Prince", "diana@example.com",1004, PowerAgreementType.NORGEPRICE );
+        Customer ethan = new Customer("Ethan Hunt", "ethan@example.com", 1005, PowerAgreementType.SPOT);
 
         //a)
         custom.addCustomer(alice);
